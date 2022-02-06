@@ -1,6 +1,6 @@
 Modulo para aprender Django
 
-Aplicação disponível em https://django-aislan.herokuapp.com/
+Aplicação disponível em https://django-aislan.herokuapp.com//
 
 
 [![Django Project Web](https://github.com/Aislanfagundes/django/actions/workflows/django_project.yml/badge.svg)](https://github.com/Aislanfagundes/django/actions/workflows/django_project.yml)
