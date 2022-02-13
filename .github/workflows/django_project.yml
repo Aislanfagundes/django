@@ -15,7 +15,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.5
+        image: postgres:12
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -33,9 +33,6 @@ jobs:
         pip install pipenv
         pipenv sync --dev
         cp contrib/env-sample .env
-    - name: Install dependencies
-      run: |
-        psql -c "CREATE DATABASE testdb;" -U postgres
     - name: Lint with flake8
       run: |
         pipenv run flake8 .
