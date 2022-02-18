@@ -76,6 +76,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuração Django Debug Toolbar
+
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -116,6 +124,8 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
+USE_L1ON = True
+
 USE_TZ = True
 
 
@@ -124,16 +134,14 @@ USE_TZ = True
 
 # Configuração de ambiente de desenvolvimento
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = 'static/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 COLLECTFAST_ENABLED = False
 
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
@@ -144,6 +152,8 @@ if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True
