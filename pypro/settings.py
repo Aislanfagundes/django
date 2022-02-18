@@ -182,8 +182,3 @@ if AWS_ACCESS_KEY_ID:
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-def show_toolbar(request):
-    return True
-
-SHOW_TOOLBAR_CALLBACK = show_toolbar
