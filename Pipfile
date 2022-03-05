@@ -15,6 +15,7 @@ collectfast = "*"
 django-debug-toolbar = "*"
 pip = "*"
 sentry-sdk = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 flake8 = "*"
