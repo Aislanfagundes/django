@@ -12,7 +12,7 @@ def video(db):
 
 @pytest.fixture
 def resp(client, video):
-    return client.get(reverse('aperitivos:video', args=(video.slug,)))\
+    return client.get(reverse('aperitivos:video', args=(video.slug,)))
 
 
 @pytest.fixture
