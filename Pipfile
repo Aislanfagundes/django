@@ -25,6 +25,7 @@ pytest-cov = "*"
 pytest = "*"
 model-bakery = "*"
 model-mommy = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.8"
