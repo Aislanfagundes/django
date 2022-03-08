@@ -16,14 +16,13 @@ django-debug-toolbar = "*"
 pip = "*"
 sentry-sdk = "*"
 django-ordered-model = "*"
-model-bakery = "*"
 
 [dev-packages]
 flake8 = "*"
 codecov = "*"
 pytest-cov = "*"
-model-bakery = "*"
 model-mommy = "*"
+model-bakery = "*"
 
 [requires]
 python_version = "3.8"
