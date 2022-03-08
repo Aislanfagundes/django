@@ -35,7 +35,11 @@ WHERE m.id = 2]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/aperitivos_video" />
+      <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/modulos_modulo" />
+      <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/modulos_aula" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="802ec968-4306-457e-b837-19f0c4f15416" />
@@ -98,8 +102,8 @@ WHERE m.id = 2]]></console>
           <port value="5434" />
           <database value="postgres" />
           <type value="USER_PASSWORD" />
-          <user value="pythonpro" />
-          <deprecated-pwd value="cHl0aG9ucHJv" />
+          <user value="postgres" />
+          <deprecated-pwd value="cG9zdGdyZXM=" />
         </database>
         <properties>
           <auto-commit value="false" />
