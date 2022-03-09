@@ -1,5 +1,4 @@
 from typing import List
-
 from pypro.modulos.models import Modulo, Aula
 
 
