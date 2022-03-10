@@ -36,8 +36,6 @@ WHERE m.id = 2]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/aperitivos_video" />
-      <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/modulos_modulo" />
       <object connection-id="802ec968-4306-457e-b837-19f0c4f15416" object-ref="schemas/public/tables/modulos_aula" />
     </open-files>
   </component>
